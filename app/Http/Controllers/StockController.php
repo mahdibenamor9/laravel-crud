@@ -22,6 +22,7 @@ class StockController extends Controller
     {
         $request->validate([
             'product_name' => 'required',
+            'provider_name' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
         ]);
@@ -45,6 +46,7 @@ class StockController extends Controller
     {
         $request->validate([
             'product_name' => 'required',
+            'provider_name' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
         ]);

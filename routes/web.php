@@ -1,9 +1,9 @@
 <?php
 
-use App\Models\Provider;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProviderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StockController;
-use App\Http\Controllers\ProviderController;
 
 
 // Redirects to the Stock Resource Controller
@@ -15,4 +15,5 @@ Route::get('/providers', function () {
 });
 
 Route::resource('stocks', StockController::class);
+Route::resource('products', ProductController::class);
 Route::resource('providers', ProviderController::class);
