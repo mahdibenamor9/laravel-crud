@@ -15,8 +15,18 @@ class StockTableSeeder extends Seeder
     public function run()
     {
         Stock::create([
-            'product_name' => 'Twinty Pencil',
-            'product_desc' => 'HB 5 Drawing Pencil',
+            'product_name' => 'Bic',
+            'product_desc' => 'Bic blue pen',
+            'product_qty' => 100,
+        ]);
+        Stock::create([
+            'product_name' => 'Notebok',
+            'product_desc' => 'colorful notebok',
+            'product_qty' => 100,
+        ]);
+        Stock::create([
+            'product_name' => 'Notebook',
+            'product_desc' => 'Sketch Notebook',
             'product_qty' => 100,
         ]);
     }
