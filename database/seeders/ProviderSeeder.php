@@ -16,17 +16,17 @@ class ProviderSeeder extends Seeder
     {
         Provider::create([
             'provider_name' => 'Maped',
-            'provider_country' => 'Italie',
+            'provider_country' => 'tunisia',
 
         ]);
         Provider::create([
             'provider_name' => 'Reynolds',
-            'provider_country' => 'France',
+            'provider_country' => 'Italie',
 
         ]);
         Provider::create([
             'provider_name' => 'Bic',
-            'provider_country' => 'Tunisia',
+            'provider_country' => 'libya',
 
         ]);
     }
