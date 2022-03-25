@@ -26,7 +26,7 @@ class ProviderSeeder extends Seeder
         ]);
         Provider::create([
             'provider_name' => 'Bic',
-            'provider_country' => 'Maroc',
+            'provider_country' => 'libya',
 
         ]);
     }
