@@ -15,8 +15,8 @@ class ProviderSeeder extends Seeder
     public function run()
     {
         Provider::create([
-            'provider_name' => 'Mapped',
-            'provider_country' => 'Germany',
+            'provider_name' => 'Maped',
+            'provider_country' => 'tunisia',
 
         ]);
         Provider::create([
@@ -26,7 +26,7 @@ class ProviderSeeder extends Seeder
         ]);
         Provider::create([
             'provider_name' => 'Bic',
-            'provider_country' => 'Maroc',
+            'provider_country' => 'libya',
 
         ]);
     }
