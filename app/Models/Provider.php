@@ -9,7 +9,7 @@ class Provider extends Model
 {
     use HasFactory;
     public $fillable = [
-        'provier_name',
+        'provider_name',
         'provider_country',
     ];
 }

@@ -31,7 +31,7 @@
                         <td>{{ ++$i }}</td>
                         <td>{{ $provider->provider_name }}</td>
                         <td>{{ $provider->provider_country }}</td>
-             
+
                         <td>
                             <form action="{{ route('providers.destroy',$provider->id) }}" method="POST">
                                 <a class="btn btn-info" href="{{ route('providers.show',$provider->id) }}">Show</a>

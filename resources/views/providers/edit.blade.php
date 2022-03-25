@@ -22,7 +22,7 @@
         </div>
     @endif
 
-    <form action="{{ route('providers.update',$stock->id) }}" method="POST">
+    <form action="{{ route('providers.update',$provider->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -30,13 +30,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Name:</strong>
-                    <input type="text" name="provider_name" value="{{ $stock->provider_name }}" class="form-control" placeholder="Product Name">
+                    <input type="text" name="provider_name" value="{{ $provider->provider_name }}" class="form-control" placeholder="Product Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Description:</strong>
-                    <textarea class="form-control" name="provider_country" style="height:150px"  placeholder="Product Description">{{ $stock->provider_country }}</textarea>
+                    <textarea class="form-control" name="provider_country" style="height:150px"  placeholder="Product Description">{{ $provider->provider_country }}</textarea>
                 </div>
             </div>
 
