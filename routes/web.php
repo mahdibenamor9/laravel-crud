@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,3 +11,4 @@ Route::get('/', function () {
 });
 
 Route::resource('stocks', StockController::class);
+Route::resource('products', ProductController::class);
