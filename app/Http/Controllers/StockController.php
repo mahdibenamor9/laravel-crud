@@ -22,6 +22,7 @@ class StockController extends Controller
     {
         $request->validate([
             'product_name' => 'required',
+            'provider_name' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
         ]);
@@ -45,6 +46,7 @@ class StockController extends Controller
     {
         $request->validate([
             'product_name' => 'required',
+            'provider_name' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
         ]);
@@ -57,6 +59,6 @@ class StockController extends Controller
     public function destroy(Stock $stock)
     {
         $stock->delete();
-        return redirect()->route('stocks.index')->with('success','Student deleted successfully.');
+        return redirect()->route('stocks.index')->with('success','Item deleted successfully.');
     }
 }
