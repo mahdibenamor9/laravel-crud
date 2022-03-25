@@ -27,10 +27,26 @@
         @method('PUT')
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Name:</strong>
-                    <input type="text" name="product_name" value="{{ $stock->product_name }}" class="form-control" placeholder="Product Name">
+                    <select name="product_id" id="" class="form-control">
+                        <option value=""></option>
+                        @foreach($products as $product)
+                        <option value="{{ $product->id }}" @if($stock->product_id == $product->id) selected @endif> {{ $product->product_name }} </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Provider Name:</strong>
+                    <select name="provider_id" id="" class="form-control">
+                        <option value=""></option>
+                        @foreach($providers as $provider)
+                        <option value="{{ $provider->id }}" @if($stock->provider_id == $provider->id) selected @endif> {{ $provider->provider_name }} </option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

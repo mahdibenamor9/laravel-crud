@@ -12,4 +12,10 @@ class Provider extends Model
         'provider_name',
         'provider_country',
     ];
+    
+
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class);
+    }
 }

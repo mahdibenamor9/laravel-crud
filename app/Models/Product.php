@@ -13,4 +13,9 @@ class Product extends Model
         'product_desc',
         'registration_number',
     ];
+
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class);
+    }
 }
