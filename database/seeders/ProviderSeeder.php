@@ -15,18 +15,27 @@ class ProviderSeeder extends Seeder
     public function run()
     {
         Provider::create([
+<<<<<<< HEAD
             'provider_name' => 'Maped',
-            'provider_country' => 'Italie',
+            'provider_country' => 'tunisia',
+=======
+            'provider_name' => 'Mapped',
+            'provider_country' => 'Germany',
+>>>>>>> develop
 
         ]);
         Provider::create([
             'provider_name' => 'Reynolds',
-            'provider_country' => 'France',
+            'provider_country' => 'Italie',
 
         ]);
         Provider::create([
             'provider_name' => 'Bic',
-            'provider_country' => 'Tunisia',
+<<<<<<< HEAD
+            'provider_country' => 'libya',
+=======
+            'provider_country' => 'Maroc',
+>>>>>>> develop
 
         ]);
     }
