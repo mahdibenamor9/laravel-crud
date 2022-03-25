@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Provider;
 use App\Models\Stock;
 use Illuminate\Http\Request;
 
@@ -15,14 +17,17 @@ class StockController extends Controller
 
     public function create()
     {
-        return view('stocks.create');
+        $products = Product::get();
+        $providers = Provider::get();
+
+        return view('stocks.create',compact('products','providers'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'product_name' => 'required',
-            'provider_name' => 'required',
+            'product_id' => 'required',
+            'provider_id' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
         ]);
@@ -39,14 +44,17 @@ class StockController extends Controller
 
     public function edit(Stock $stock)
     {
-        return view('stocks.edit',compact('stock'));
+        $products = Product::get();
+        $providers = Provider::get();
+
+        return view('stocks.edit',compact('stock','products','providers'));
     }
 
     public function update(Request $request, Stock $stock)
     {
         $request->validate([
-            'product_name' => 'required',
-            'provider_name' => 'required',
+            'product_id' => 'required',
+            'provider_id' => 'required',
             'product_desc' => 'required',
             'product_qty' => 'required',
         ]);
