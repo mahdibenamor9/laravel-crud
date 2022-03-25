@@ -10,6 +10,9 @@ use App\Http\Controllers\StockController;
 Route::get('/', function () {
     return redirect('/stocks');
 });
+Route::get('/providers', function () {
+    return redirect('/providers');
+});
 
 Route::resource('stocks', StockController::class);
 Route::resource('products', ProductController::class);

@@ -14,8 +14,8 @@ class ProviderController extends Controller
      */
     public function index()
     {
-        $stocks = Provider::paginate(5);
-        return view('stocks.index',compact('stocks'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $providers = Provider::paginate(5);
+        return view('providers.index',compact('providers'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProviderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'provier_name' => 'required',
+            'provider_name' => 'required',
             'provider_country' => 'required',
 
         ]);
@@ -54,7 +54,7 @@ class ProviderController extends Controller
      */
     public function show(Provider $provider)
     {
-        return view('stocks.show',compact('stock'));
+        return view('providers.show',compact('provider'));
     }
 
     /**
@@ -65,7 +65,7 @@ class ProviderController extends Controller
      */
     public function edit(Provider $provider)
     {
-        return view('stocks.edit',compact('stock'));
+        return view('providers.edit',compact('provider'));
     }
 
     /**
@@ -78,13 +78,12 @@ class ProviderController extends Controller
     public function update(Request $request, Provider $provider)
     {
         $request->validate([
-            'product_name' => 'required',
-            'product_desc' => 'required',
-            'product_qty' => 'required',
+            'provider_name' => 'required',
+            'provider_country' => 'required',
         ]);
 
         $provider->update($request->all());
-        return redirect()->route('stocks.index')->with('success','Updated Successfully.');
+        return redirect()->route('providers.index')->with('success','Updated Successfully.');
     }
 
     /**
@@ -96,6 +95,6 @@ class ProviderController extends Controller
     public function destroy(Provider $provider)
     {
         $provider->delete();
-        return redirect()->route('stocks.index')->with('success','Student deleted successfully.');
+        return redirect()->route('providers.index')->with('success','Student deleted successfully.');
     }
 }
