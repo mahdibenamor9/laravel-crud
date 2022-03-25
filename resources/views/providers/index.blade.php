@@ -1,13 +1,13 @@
-    @extends('layout')
+@extends('layout')
 
     @section('content')
 
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="text-center">Stock Management</h2>
+                <h2 class="text-center">Provider Management</h2>
             </div>
             <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-                <a class="btn btn-success " href="{{ route('stocks.create') }}"> Add Stock</a>
+                <a class="btn btn-success " href="{{ route('providers.create') }}"> Add Provider</a>
             </div>
         </div>
 
@@ -17,25 +17,25 @@
             </div>
         @endif
 
-        @if(sizeof($stocks) > 0)
+        @if(sizeof($providers) > 0)
             <table class="table table-bordered">
                 <tr>
                     <th>No</th>
-                    <th>Product Name</th>
-                    <th>Product Description</th>
-                    <th>Qty.</th>
+                    <th>Provider Name</th>
+                    <th>Provider Country</th>
+
                     <th width="280px">More</th>
                 </tr>
-                @foreach ($stocks as $stock)
+                @foreach ($providers as $provider)
                     <tr>
                         <td>{{ ++$i }}</td>
-                        <td>{{ $stock->product_name }}</td>
-                        <td>{{ $stock->product_desc }}</td>
-                        <td>{{ $stock->product_qty }}</td>
+                        <td>{{ $provider->provider_name }}</td>
+                        <td>{{ $provider->provider_country }}</td>
+
                         <td>
-                            <form action="{{ route('stocks.destroy',$stock->id) }}" method="POST">
-                                <a class="btn btn-info" href="{{ route('stocks.show',$stock->id) }}">Show</a>
-                                <a class="btn btn-primary" href="{{ route('stocks.edit',$stock->id) }}">Edit</a>
+                            <form action="{{ route('providers.destroy',$provider->id) }}" method="POST">
+                                <a class="btn btn-info" href="{{ route('providers.show',$provider->id) }}">Show</a>
+                                <a class="btn btn-primary" href="{{ route('providers.edit',$provider->id) }}">Edit</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -48,6 +48,6 @@
             <div class="alert alert-alert">Start Adding to the Database.</div>
         @endif
 
-        {!! $stocks->links() !!}
+        {!! $providers->links() !!}
 
     @endsection

@@ -4,10 +4,10 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-center">Edit Stock</h2>
+            <h2 class="text-center">Edit Provider</h2>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
-            <a class="btn btn-primary" href="{{ route('stocks.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('providers.index') }}"> Back</a>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
         </div>
     @endif
 
-    <form action="{{ route('stocks.update',$stock->id) }}" method="POST">
+    <form action="{{ route('providers.update',$provider->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -30,21 +30,16 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Name:</strong>
-                    <input type="text" name="product_name" value="{{ $stock->product_name }}" class="form-control" placeholder="Product Name">
+                    <input type="text" name="provider_name" value="{{ $provider->provider_name }}" class="form-control" placeholder="Product Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Product Description:</strong>
-                    <textarea class="form-control" name="product_desc" style="height:150px"  placeholder="Product Description">{{ $stock->product_desc }}</textarea>
+                    <textarea class="form-control" name="provider_country" style="height:150px"  placeholder="Product Description">{{ $provider->provider_country }}</textarea>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Qty:</strong>
-                    <input type="number" name="product_qty" class="form-control" style="height:150px" value="{{ $stock->product_qty }}"  placeholder="Quantity">
-                </div>
-            </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
