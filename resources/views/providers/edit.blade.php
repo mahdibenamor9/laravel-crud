@@ -1,4 +1,4 @@
-@extends('providers.layout')
+@extends('layout')
 
 @section('content')
 

@@ -13,6 +13,9 @@ Route::get('/', function () {
 Route::get('/providers', function () {
     return redirect('/providers');
 });
+Route::get('/products', function () {
+    return redirect('/products');
+});
 
 Route::resource('stocks', StockController::class);
 Route::resource('products', ProductController::class);
