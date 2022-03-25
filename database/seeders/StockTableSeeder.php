@@ -15,17 +15,17 @@ class StockTableSeeder extends Seeder
     public function run()
     {
         Stock::create([
-            'product_name' => 'Bic',
+            'product_name' => 'Maped',
             'product_desc' => 'Bic blue pen',
             'product_qty' => 100,
         ]);
         Stock::create([
-            'product_name' => 'Notebok',
+            'product_name' => 'Book',
             'product_desc' => 'colorful notebok',
             'product_qty' => 100,
         ]);
         Stock::create([
-            'product_name' => 'Notebook',
+            'product_name' => 'Book',
             'product_desc' => 'Sketch Notebook',
             'product_qty' => 100,
         ]);
